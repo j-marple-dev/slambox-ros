@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>slambox_ros</name>
+  <version>0.0.1</version>
+  <description>
+    SLAMBOX ROS driver
+  </description>
+  <maintainer email="limjk@jmarple.ai">Jongkuk Lim</maintainer>
+  <license>Private</license>
+
+  <url>https://jmarple.ai</url>
+  <author>Jongkuk LIm</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+
+  <build_depend>message_generation</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+
+  <doc_depend>doxygen</doc_depend>
+
+</package>

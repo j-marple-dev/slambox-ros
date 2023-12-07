@@ -1,0 +1,58 @@
+name: docker-build-test
+on:
+  - pull_request
+  - push
+
+jobs:
+  docker-build:
+    runs-on: [self-hosted, slambox]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          ref: ${{ github.ref }}
+      - name: Docker build
+        run: docker build . -t jmarpledev/slambox-ros:github_action -f docker/Dockerfile  --build-arg UID=$(id -u) --build-arg GID=$(id -g)
+
+  format-lint:
+    runs-on: [self-hosted, slambox]
+    needs: docker-build
+    steps:
+      - name: format-and-lint
+        uses: addnab/docker-run-action@v3
+        with:
+          image: jmarpledev/slambox-ros:github_action
+          shell: bash
+          options: -v ${{ github.workspace }}:/home/user/catkin_ws/src/slambox-ros
+          run: |
+            cd ~/catkin_ws/src/slambox-ros && \
+            export PATH=$PATH:/home/user/.local/bin && \
+            ./run_check.sh all
+
+  build-test:
+    runs-on: [self-hosted, slambox]
+    needs: docker-build
+    steps:
+      - name: build-test
+        uses: addnab/docker-run-action@v3
+        with:
+          image: jmarpledev/slambox-ros:github_action
+          shell: bash
+          options: -v ${{ github.workspace }}:/home/user/catkin_ws/src/slambox-ros
+          run: |
+            cd ~/catkin_ws && \
+            catkin build
+
+  unit-test:
+    runs-on: [self-hosted, slambox]
+    needs: docker-build
+    steps:
+      - name: build-and-unittest
+        uses: addnab/docker-run-action@v3
+        with:
+          image: jmarpledev/slambox-ros:github_action
+          shell: bash
+          options: -v ${{ github.workspace  }}:/home/user/catkin_ws/src/slambox-ros
+          run: |
+            cd ~/catkin_ws && \
+            catkin test

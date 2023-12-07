@@ -1,0 +1,11 @@
+<launch>
+  <rosparam command="load" file="$(find slambox_ros)/config/client.yaml" />
+  <arg name="rviz" default="false" />
+
+  <node pkg="slambox_ros" type="slambox_ros-node_client" name="slambox_ros_client" output="screen">
+  </node>
+
+  <group if="$(arg rviz)">
+    <node name="rviz_slambox_ros" pkg="rviz" type="rviz" args="-d $(find slambox_ros)/config/slambox_ros.rviz" />
+  </group>
+</launch>

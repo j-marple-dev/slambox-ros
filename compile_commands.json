@@ -1,0 +1,132 @@
+[
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-string_utils.dir/tests/test_string_utils.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/tests/test_string_utils.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/tests/test_string_utils.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-string_utils.dir/src/applications/config_cli_app.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-string_utils.dir/src/applications/driver_client.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-string_utils.dir/src/utils/ros_msg_converter.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-string_utils.dir/src/utils/string_utils.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-msg_converter.dir/tests/test_msg_converter.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/tests/test_msg_converter.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/tests/test_msg_converter.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-msg_converter.dir/src/applications/config_cli_app.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-msg_converter.dir/src/applications/driver_client.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-msg_converter.dir/src/utils/ros_msg_converter.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/test-slambox_ros_driver-msg_converter.dir/src/utils/string_utils.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-config_cli.dir/src/applications/config_cli_app.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-config_cli.dir/src/applications/driver_client.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-config_cli.dir/src/utils/ros_msg_converter.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-config_cli.dir/src/utils/string_utils.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-config_cli.dir/src/config_cli.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/config_cli.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/config_cli.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-node_client.dir/src/applications/config_cli_app.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/config_cli_app.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-node_client.dir/src/applications/driver_client.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/applications/driver_client.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-node_client.dir/src/utils/ros_msg_converter.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/ros_msg_converter.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-node_client.dir/src/utils/string_utils.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/utils/string_utils.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build",
+  "command": "/usr/bin/c++  -DGLOG_CUSTOM_PREFIX_SUPPORT -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest -I/home/user/catkin_ws/src/slambox_ros_driver/libs/cli/include -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/slambox_ros_driver-node_client.dir/src/node_client.cpp.o -c /home/user/catkin_ws/src/slambox_ros_driver/src/node_client.cpp",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/src/node_client.cpp"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build/gtest/googlemock",
+  "command": "/usr/bin/c++   -isystem /usr/src/googletest/googlemock/include -isystem /usr/src/googletest/googlemock -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -std=c++11 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /usr/src/googletest/googlemock/src/gmock_main.cc",
+  "file": "/usr/src/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build/gtest/googlemock",
+  "command": "/usr/bin/c++   -I/usr/src/googletest/googlemock/include -I/usr/src/googletest/googlemock -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -std=c++11 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /usr/src/googletest/googlemock/src/gmock-all.cc",
+  "file": "/usr/src/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build/gtest/googletest",
+  "command": "/usr/bin/c++   -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -O3 -DGTEST_HAS_PTHREAD=1 -std=c++11 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /usr/src/googletest/googletest/src/gtest_main.cc",
+  "file": "/usr/src/googletest/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build/gtest/googletest",
+  "command": "/usr/bin/c++   -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -O3 -std=c++11 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc",
+  "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build/libs/fmt",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/fmt.dir/src/format.cc.o -c /home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/src/format.cc",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/src/format.cc"
+},
+{
+  "directory": "/home/user/catkin_ws/src/slambox_ros_driver/build/libs/fmt",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"slambox_ros_driver\\\" -I/home/user/catkin_ws/src/slambox_ros_driver/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/include    -std=c++17 -O3 -o CMakeFiles/fmt.dir/src/os.cc.o -c /home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/src/os.cc",
+  "file": "/home/user/catkin_ws/src/slambox_ros_driver/libs/fmt/src/os.cc"
+}
+]

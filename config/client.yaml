@@ -1,0 +1,16 @@
+serial_communication:
+  enabled: true
+  port_name: "/dev/ttyUSB1"
+  baudrate: 921600
+
+ethernet_communication:
+  enabled: false
+  server_addr: 192.168.101.101
+  port: 21580
+
+publish:
+  odom_topic: "/SLAMBOX/odom"
+  pointcloud_topic: "/SLAMBOX/pointcloud"
+
+subscribe:
+  request_topic: "/SLAMBOX/request"

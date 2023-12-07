@@ -1,0 +1,13 @@
+run_arg:
+    - --privileged
+    - -e DISPLAY=:0
+    - -e TERM=xterm-256color
+    - -v /tmp/.X11-unix:/tmp/.X11-unix:ro
+    - -v /dev:/dev
+    - -v $PWD:/home/user/catkin_ws/src/slambox_ros_driver
+    - -v $HOME/.config/github-copilot:/home/user/.config/github-copilot
+    - --network host
+build_arg: []
+mount_pwd: false
+default_shell: zsh
+lastexecid: 

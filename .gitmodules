@@ -1,0 +1,8 @@
+[submodule "libs/cli"]
+	path = libs/cli
+	url = https://github.com/daniele77/cli.git
+	branch = v2.1.0
+[submodule "libs/fmt"]
+	path = libs/fmt
+	url = https://github.com/fmtlib/fmt.git
+	branch = 10.1.1
