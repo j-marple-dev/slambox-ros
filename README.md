@@ -36,14 +36,11 @@ Table of Contents
     # Clone this repository
     git clone https://github.com/j-marple-dev/slambox-ros.git --recursive
 
+    # Change directory
+    cd slambox-ros
+
     # Build docker image
-    docker build . -t jmarpledev/slambox_ros -f docker/Dockerfile  --build-arg UID=$(id -u) --build-arg GID=$(id -u)
-
-    # Run docker container with shell (For development environment)
-    docker run -tid --privileged -e DISPLAY=:0 -e TERM=xterm-256color -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v /dev:/dev -v $PWD:/home/user/catkin_ws/src/slambox-ros --network host jmarpledev/slambox_ros /usr/bin/zsh
-
-    # Run docker container for running SLAMBOX driver client
-    docker run -ti --privileged -e TERM=xterm-256color -v /dev:/dev -v $PWD:/home/user/catkin_ws/src/slambox-ros --network host jmarpledev/slambox_ros /usr/bin/bash -lic "roslaunch slambox_ros slambox_ros_client.launch"
+    docker build . -t jmarpledev/slambox-ros -f docker/Dockerfile  --build-arg UID=$(id -u) --build-arg GID=$(id -u)
     ```
 
 ### 1.1.3. Local ROS system
@@ -66,7 +63,8 @@ source devel/setup.{bash|zsh}
 
 ## 1.2. Configuration
 ### 1.2.1. Client configuration
-- Please refer to [config/client.yaml](config/client.yaml) for configuration on client side.
+- Please modify [config/client.yaml](config/client.yaml) for configuration on client side.
+- Make sure [SLAMBOX Setting](https://sbox.jmarple.ai/SLAMBOXSetting.html) align with the `config.yaml`
 ```yaml
 serial_communication:
   enabled: true
@@ -74,8 +72,8 @@ serial_communication:
   baudrate: 921600
 
 ethernet_communication:
-  enabled: true
-  server_addr: "192.168.1.50"
+  enabled: false
+  server_addr: "192.168.101.101"
   port: 21580
 
 publish:
@@ -87,6 +85,7 @@ subscribe:
 ```
 
 ## 1.3. Usage
+### 1.3.1. Local ROS system
 - Running ROS node
     ```shell
     roslaunch slambox_ros slambox_ros_client.launch
@@ -96,6 +95,23 @@ subscribe:
     ```shell
     rostopic hz /SLAMBOX/odom /SLAMBOX/pointcloud
     ```
+
+### 1.3.2. Running on Docker image
+- Run docker container for running SLAMBOX-ROS client
+    ```shell
+    docker run -ti --privileged -e DISPLAY=:0 -e TERM=xterm-256color -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v /dev:/dev -v $PWD:/home/user/catkin_ws/src/slambox-ros --network host jmarpledev/slambox-ros /usr/bin/zsh
+    ```
+
+- Run docker container for running SLAMBOX-ROS client with rviz visualization
+    ```shell
+    docker run -ti --privileged -e TERM=xterm-256color -e DISPLAY=:0 -v /dev:/dev -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $PWD:/home/user/catkin_ws/src/slambox-ros --network host jmarpledev/slambox-ros /usr/bin/bash -lic "roslaunch slambox_ros slambox_ros_client.launch rviz:=true"
+    ```
+
+- Run docker container with shell (For development environment)
+    ```shell
+    docker run -ti --privileged -e DISPLAY=:0 -e TERM=xterm-256color -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v /dev:/dev -v $PWD:/home/user/catkin_ws/src/slambox-ros --network host jmarpledev/slambox-ros /usr/bin/zsh
+    ```
+
 
 # 2. Getting help
 Please visit https://sbox.jmarple.ai for more information.
