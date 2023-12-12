@@ -1,5 +1,5 @@
-# SLAM BOX ros driver
-SLAM BOX ros driver is a ROS package to communicate with SLAM BOX.
+# SLAMBOX ros driver
+SLAMBOX ros driver is a ROS package to communicate with SLAMBOX.
 
 Table of Contents
 =================
