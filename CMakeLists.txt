@@ -17,7 +17,7 @@ find_package(glog 0.6.0 REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(yaml-cpp REQUIRED )
 
-find_package(slambox_sdk 0.1.0 REQUIRED)
+find_package(slambox_sdk 0.2.0 REQUIRED)
 
 catkin_package(
   CATKIN_DEPENDS roscpp 
@@ -52,13 +52,11 @@ FOREACH(source_executable ${SOURCES_EXECUTABLE})
     glog::glog
     ${slambox_sdk_LIBRARIES}
     ZLIB::ZLIB
-    cli::cli
     fmt::fmt
     ${YAML_CPP_LIBRARIES}
   )
 ENDFOREACH()
 
-add_subdirectory("libs/cli")
 add_subdirectory("libs/fmt")
 
 # Unit test
@@ -86,7 +84,6 @@ if (CATKIN_ENABLE_TESTING)
             gtest_main
             glog::glog
             ${slambox_sdk_LIBRARIES}
-            cli::cli
             fmt::fmt
             ${YAML_CPP_LIBRARIES}
         )

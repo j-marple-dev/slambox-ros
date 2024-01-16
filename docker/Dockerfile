@@ -71,7 +71,7 @@ RUN echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/user/.local/lib" >> /ho
 # Install SLAMBOX SDK
 RUN sudo apt-get install -y libserial-dev
 WORKDIR /home/user
-RUN git clone https://github.com/j-marple-dev/slambox-sdk.git -b v0.1.0 && \
+RUN git clone https://github.com/j-marple-dev/slambox-sdk.git -b v0.2.0 && \
     mkdir -p slambox-sdk/build && \
     cd slambox-sdk/build && \
     cmake -G "Unix Makefiles" .. && \
