@@ -9,8 +9,7 @@ ENV TERM xterm-256color
 ENV NVIDIA_VISIBLE_DEVICES ${NVIDIA_VISIBLE_DEVICES:-all}
 ENV NVIDIA_DRIVER_CAPABILITIES ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
 
-RUN sh -c 'echo "deb http://packages.ros.org/ros-shadow-fixed/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-shadow.list' \
-	&& apt-get update \
+RUN apt-get update \
 	&& apt-get -y --quiet --no-install-recommends install \
 	ros-noetic-desktop \
 	ros-noetic-tf2-geometry-msgs
@@ -71,7 +70,7 @@ RUN echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/user/.local/lib" >> /ho
 # Install SLAMBOX SDK
 RUN sudo apt-get install -y libserial-dev
 WORKDIR /home/user
-RUN git clone https://github.com/j-marple-dev/slambox-sdk.git -b v0.1.0 && \
+RUN git clone https://github.com/j-marple-dev/slambox-sdk.git -b v0.2.0 --recursive && \
     mkdir -p slambox-sdk/build && \
     cd slambox-sdk/build && \
     cmake -G "Unix Makefiles" .. && \
