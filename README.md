@@ -21,7 +21,7 @@ Table of Contents
 ## 1.1. Installation
 ### 1.1.1. Requirements
 - [ROS noetic](https://wiki.ros.org/noetic/Installation/Ubuntu) (Recommended)
-- [SLAMBOX-SDK](https://github.com/j-marple-dev/slambox-sdk) (v0.1.0)
+- [SLAMBOX-SDK](https://github.com/j-marple-dev/slambox-sdk) (v0.2.0)
 - glog (>=v0.6.0)
 - CMake (>= 3.16.3)
 - docker (Optional but highly recommended)
