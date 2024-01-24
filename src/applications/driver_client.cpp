@@ -5,6 +5,10 @@
 
 #include "applications/driver_client.hpp"
 
+#include <pcl/point_cloud.h>
+#include <pcl/point_types.h>
+#include <pcl_conversions/pcl_conversions.h>
+
 #include <nav_msgs/Odometry.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <std_msgs/String.h>
@@ -52,6 +56,8 @@ SLAMBOXDriverClient::SLAMBOXDriverClient(ros::NodeHandle nh,
       nh_.advertise<sensor_msgs::PointCloud2>(publish_pointcloud_topic_, 1);
   request_sub_ = nh_.subscribe(subscribe_request_topic_, 1,
                                &SLAMBOXDriverClient::callback_request_, this);
+
+  cur_pcl_ = pcl::PointCloud<pcl::PointXYZ>();
 
   if (is_serial_enabled_) {
     serial_communication_ = std::make_unique<SerialCommunication>(
@@ -123,26 +129,31 @@ void SLAMBOXDriverClient::on_push_odometry(const sbox_msgs::Odometry &odom) {
 void SLAMBOXDriverClient::on_push_pointcloud(
     const sbox_msgs::PointCloud2 &pointcloud) {
   sensor_msgs::PointCloud2 pointcloud_msg = sbox_msgs::to_ros_msg(pointcloud);
-  pointcloud_pub_.publish(pointcloud_msg);
+  this->concat_pub_pcl_(pointcloud_msg);
+  // pointcloud_pub_.publish(pointcloud_msg);
 }
 
+// cppcheck-suppress unusedFunction
 void SLAMBOXDriverClient::on_response_mavlink_communication_config(
     bool enabled, uint32_t baudrate) {
   LOG(INFO) << "[mavlink] " << (enabled ? "Enabled" : "Disabled")
             << ", baudrate: " << baudrate << std::endl;
 }
 
+// cppcheck-suppress unusedFunction
 void SLAMBOXDriverClient::on_response_serial_communication_config(
     bool enabled, uint32_t baudrate) {
   LOG(INFO) << "[serial] " << (enabled ? "Enabled" : "Disabled")
             << ", baudrate: " << baudrate << std::endl;
 }
+// cppcheck-suppress unusedFunction
 void SLAMBOXDriverClient::on_response_ethernet_communication_config(
     bool enabled, uint32_t port) {
   LOG(INFO) << "[ethernet] " << (enabled ? "Enabled" : "Disabled")
             << ", port: " << port << std::endl;
 }
 
+// cppcheck-suppress unusedFunction
 void SLAMBOXDriverClient::on_acknowledge(std::array<uint8_t, 2> requested_mode,
                                          uint8_t status) {
   LOG(INFO) << fmt::format(
@@ -197,6 +208,32 @@ void SLAMBOXDriverClient::callback_request_(const std_msgs::String &msg) {
 
   if (is_ethernet_enabled_) {
     udp_communication_->write(data);
+  }
+}
+
+void SLAMBOXDriverClient::concat_pub_pcl_(sensor_msgs::PointCloud2 msg) {
+  pcl::PointCloud<pcl::PointXYZ> cloud_dst;
+  if (!have_called_) {
+    have_called_ = true;
+    cur_pcl_timestamp_ = msg.header.stamp;
+    cur_msg_ = msg;
+    pcl::fromROSMsg(msg, this->cur_pcl_);
+  }
+
+  if (cur_pcl_timestamp_ == msg.header.stamp) {
+    // Convert msg to pointcloud
+    pcl::fromROSMsg(msg, cloud_dst);
+    this->cur_pcl_ += cloud_dst;
+  } else {
+    sensor_msgs::PointCloud2 temp;
+    pcl::toROSMsg(this->cur_pcl_, temp);
+    temp.header.stamp = cur_pcl_timestamp_;
+    pointcloud_pub_.publish(temp);
+
+    cur_pcl_timestamp_ = msg.header.stamp;
+    cur_msg_ = msg;
+    // Convert msg to pointcloud
+    pcl::fromROSMsg(msg, this->cur_pcl_);
   }
 }
 }  // namespace sbox
