@@ -62,6 +62,8 @@ RUN git clone https://github.com/doxygen/doxygen.git -b Release_1_9_8 \
 RUN sudo apt-get install -y ros-noetic-catkin python3-catkin-tools \
     && sudo apt-get purge -y libtbb-dev
 
+RUN sudo apt-get install -y libpcl-dev libeigen3-dev ros-noetic-pcl-ros
+
 RUN sudo usermod -aG dialout user
 
 RUN echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/user/.local/lib" >> /home/user/.bashrc

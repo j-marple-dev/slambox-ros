@@ -16,6 +16,9 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(glog 0.6.0 REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(yaml-cpp REQUIRED )
+find_package(PCL REQUIRED)
+find_package(pcl_ros REQUIRED)
+find_package(pcl_conversions REQUIRED)
 
 find_package(slambox_sdk 0.2.0 REQUIRED)
 
@@ -27,7 +30,10 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
 )
-include_directories(${YAML_CPP_INCLUDE_DIRS})
+include_directories(
+  ${YAML_CPP_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
+)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 file(GLOB SOURCES_EXECUTABLE "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
@@ -54,6 +60,7 @@ FOREACH(source_executable ${SOURCES_EXECUTABLE})
     ZLIB::ZLIB
     fmt::fmt
     ${YAML_CPP_LIBRARIES}
+    ${PCL_LIBRARIES}
   )
 ENDFOREACH()
 
@@ -86,6 +93,7 @@ if (CATKIN_ENABLE_TESTING)
             ${slambox_sdk_LIBRARIES}
             fmt::fmt
             ${YAML_CPP_LIBRARIES}
+            ${PCL_LIBRARIES}
         )
 
         add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})

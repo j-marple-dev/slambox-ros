@@ -6,7 +6,11 @@
 #ifndef SLAMBOX_ROS_INCLUDE_APPLICATIONS_DRIVER_CLIENT_HPP_
 #define SLAMBOX_ROS_INCLUDE_APPLICATIONS_DRIVER_CLIENT_HPP_
 
+#include <pcl/point_cloud.h>
+#include <pcl/point_types.h>
+
 #include <ros/ros.h>
+#include <sensor_msgs/PointCloud2.h>
 #include <std_msgs/String.h>
 
 #include <memory>
@@ -157,6 +161,22 @@ class SLAMBOXDriverClient : public ParsedMessageInterface {
 
   /// @brief Last ping time. This is used to check if server is alive.
   ros::Time last_ping_time_;
+
+  /// @brief concat point cloud and publish to ros
+  /// @param msg ROS sensor message of pointcloud
+  void concat_pub_pcl_(sensor_msgs::PointCloud2 msg);
+
+  /// @brief check it is the first call
+  bool have_called_ = false;
+
+  /// @brief ros time from message timestamp
+  ros::Time cur_pcl_timestamp_;
+
+  /// @brief current pointcloud
+  pcl::PointCloud<pcl::PointXYZ> cur_pcl_;
+
+  /// @brief current message
+  sensor_msgs::PointCloud2 cur_msg_;
 };
 
 }  // namespace sbox
