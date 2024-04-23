@@ -9,6 +9,7 @@ ENV TERM xterm-256color
 ENV NVIDIA_VISIBLE_DEVICES ${NVIDIA_VISIBLE_DEVICES:-all}
 ENV NVIDIA_DRIVER_CAPABILITIES ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
 
+RUN until apt-get update --fix-missing; do echo "Retrying"; done
 RUN apt-get update \
 	&& apt-get -y --quiet --no-install-recommends install \
 	ros-noetic-desktop \
