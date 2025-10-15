@@ -1,6 +1,6 @@
 serial_communication:
   enabled: true
-  port_name: "/dev/ttyUSB1"
+  port_name: "/dev/ttyUSB0"
   baudrate: 921600
 
 ethernet_communication:
